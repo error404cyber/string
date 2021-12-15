@@ -98,6 +98,7 @@ Error test_memcpy(){
         printf("Not right\n");
         return NOT_OK;
     }
+	
 	if (my_strcmp(s6, "jas") != 0){
         printf("Not right\n");
         return NOT_OK;
