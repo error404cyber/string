@@ -9,6 +9,5 @@ Error test_strcpy();
 Error test_strstr();
 Error test_strdup();
 Error test_memchr();
-Error test_memset();
 Error test_memcpy();
 Error test_strchr();
