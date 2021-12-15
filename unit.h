@@ -1,4 +1,4 @@
-#include "string.h"
+#include "lib.h"
   
  typedef enum Error { OK, NOT_OK } Error;
 
