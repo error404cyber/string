@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>   
-#include "lib.h"
+#include "string.h"
 
 /**
  * Функция считает кол-во символов в строке
