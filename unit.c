@@ -18,7 +18,8 @@ Error test_strlen(){
   char* s1 = "asd";
   if (my_strlen(s1) != 3){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -27,7 +28,8 @@ Error test_strcmp(){
   char s4[1000] = "qwer";
   if (my_strcmp(s3, s4) != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -37,7 +39,8 @@ Error test_strcpy(){
   my_strcpy(s6, s5);
   if (my_strcmp(s6, s5) != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -46,7 +49,8 @@ Error test_strchr(){
   char z = 's';
   if (my_strcmp(strchr(s5, z), "sdkfj") != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -54,7 +58,8 @@ Error test_strstr(){
   char *str1 = "541 541 123 545", *str2 = "123";
   if (my_strcmp(my_strstr(str1, str2), "123 545") != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -64,11 +69,13 @@ Error test_strdup(){
 	
   if (s6 == NULL){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
 	
   if (my_strcmp(my_strdup(s5), "123123") != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   free(s6);
   return OK;
 }
@@ -78,7 +85,8 @@ Error test_memchr(){
   char z = '4';
   if (my_strcmp(my_memchr(str1, z, my_strlen(str1)), "41 541 123 545") != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   return OK;
 }
 
@@ -88,11 +96,13 @@ Error test_memcpy(){
 	
   if (s6 == NULL){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
 	
   if (my_strcmp(s6, "jas") != 0){
     printf("Not right\n");
-    return NOT_OK;}
+    return NOT_OK;
+  }
   free(s6);
   return OK;
 }
