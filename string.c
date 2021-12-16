@@ -14,10 +14,12 @@
 
 int my_strlen(char* s) {
   if (s == NULL){
-    return 0;}
+    return 0;
+  }
   int i = 0;
   while (s[i] != 0) {
-    i=i+1;}
+    i=i+1;
+  }
   return i;
 }
 
@@ -31,12 +33,15 @@ int my_strlen(char* s) {
 
 int my_strcmp(char* s1, char* s2) {
   if (s1 == NULL){
-    return 0;}
+    return 0;
+  }
   if (s2 == NULL){
-    return 0;}
+    return 0;
+  }
   while (*s1) {
     if (*s1 != *s2) {
-	return *s1 - *s2;}
+	return *s1 - *s2;
+    }
     s1++;
     s2++;  
   }
@@ -53,13 +58,16 @@ int my_strcmp(char* s1, char* s2) {
 
 char* my_strcpy(char* s1, char* s2) {
   if (s1 == NULL){
-    return 0;}
+    return 0;
+  }
   if (s2 == NULL){
-    return 0;}
+    return 0;
+  }
   int i=0;
   while (s2[i] != 0) {
     s1[i] = s2[i];
-    i=i+1;}
+    i=i+1;
+  }
   return s1;
 }
 
@@ -89,19 +97,28 @@ char* my_strdup (char *src){
  * @param string2 подстрока
  */
 char * my_strstr(char * string1, char * string2 ){
-  int i, check = 0, temp,
-  len1 = my_strlen(string1), len2 = my_strlen(string2);
+  int i = 0
+    , check = 0
+    , temp
+    , len1 = my_strlen(string1)
+    , len2 = my_strlen(string2);
+
   for(i = 0; i < len1 - len2; i++){
     temp = i;
-    if(string1[i] == string2[0])
-	for(int j = 0; j < len2; j++){
-	  if(string1[temp] == string2[j]){
-	    if(j == len2 - 1)
-	      return string1 + i;
-	    temp++;}
-	  else
-	    break;}
+    if (string1[i] == string2[0]) {
+      for(int j = 0; j < len2; j++){
+        if(string1[temp] == string2[j]){
+          if(j == len2 - 1) {
+            return string1 + i;
+          }
+          temp++;
+        }
+        else {
+          break;
+        }
+      }
     }
+  }
   return NULL;
 }
 
@@ -117,7 +134,8 @@ char * my_memchr(char * str, char val, size_t num){
   int i;
   for(i = 0; i < num; i++){
     if(str[i] == val)
-      return i + str;}
+      return i + str;
+    }
       return NULL;
 }
 
@@ -131,13 +149,15 @@ char * my_memchr(char * str, char val, size_t num){
 
 char * my_memset(char * str, char val, size_t num){
   if (str == NULL){
-    return 0;}
+    return 0;
+  }
   int i, len = my_strlen(str);
   char * s = my_strdup(str);
   if(num > len)
     num = len;
   for(i = 0; i < num; i++){
-    s[i] = val;}
+    s[i] = val;
+  }
   return s;
 }
 
@@ -152,7 +172,8 @@ char *my_memcpy (char * src, int n){
   str = malloc(n + 1);
   s = str;
   for(int i = 0; i < n; i++){
-    *s++ = *src++;}
+    *s++ = *src++;
+  }
   *s = '\0';
   return str;
 }
@@ -164,9 +185,11 @@ char *my_memcpy (char * src, int n){
  */
 char *my_strchr(char *s, int c){
   if (s == NULL){
-    return 0;}
+    return 0;
+  }
   while(*s){
     if(*s++ == c)
-      return --s;}
+      return --s;
+  }
   return NULL;
 }
